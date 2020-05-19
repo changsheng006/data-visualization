@@ -1,0 +1,443 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/changsheng006/data/master/airbnb_ghent.csv"
+  },
+  "hconcat": [
+    {
+      "title": {
+        "text": "Number of Reviews with Neighbourhood (Ghent)"
+      },
+      "selection": {
+        "brush": {
+          "encodings": [
+            "x"
+          ],
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "neighbourhood_cleansed",
+          "type": "nominal",
+          "title": "neighbourhood",
+          "sort": {
+            "encoding": "x"
+          }
+        },
+        "y": {
+          "field": "number_of_reviews",
+          "aggregate": "average",
+          "type": "quantitative",
+          "title": "number of reviews"
+        },
+        "color": {
+          "condition": {
+            "field": "room_type",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "neighbourhood_cleansed",
+            "type": "nominal"
+          },
+          {
+            "field": "room_type",
+            "type": "nominal",
+            "title": "room type"
+          },
+          {
+            "field": "number_of_reviews",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "number_of_reviews"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Accuracy Score with Neighbourhood (Ghent)"
+      },
+      "selection": {
+        "brush": {
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "neighbourhood_cleansed",
+          "type": "nominal",
+          "title": "Neighbourhood",
+          "sort": {
+            "encoding": "x"
+          }
+        },
+        "y": {
+          "field": "review_scores_accuracy",
+          "type": "quantitative",
+          "aggregate": "average",
+          "title": "review_scores_accuracy"
+        },
+        "color": {
+          "condition": {
+            "field": "room_type",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "neighbourhood_cleansed",
+            "type": "nominal"
+          },
+          {
+            "field": "room_type",
+            "type": "nominal",
+            "title": "room type"
+          },
+          {
+            "field": "review_scores_accuracy",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "review_scores_accuracy"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Cleanliness Score with Neighbourhood (Ghent)"
+      },
+      "selection": {
+        "brush": {
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "neighbourhood_cleansed",
+          "type": "nominal",
+          "title": "neighbourhood",
+          "sort": {
+            "encoding": "x"
+          }
+        },
+        "y": {
+          "field": "review_scores_cleanliness",
+          "type": "quantitative",
+          "aggregate": "average",
+          "title": "review_scores_cleanliness"
+        },
+        "color": {
+          "condition": {
+            "field": "room_type",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "neighbourhood_cleansed",
+            "type": "nominal"
+          },
+          {
+            "field": "room_type",
+            "type": "nominal",
+            "title": "room type"
+          },
+          {
+            "field": "review_scores_cleanliness",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "review_scores_cleanliness"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Checkin Score with Neighbourhood (Ghent)"
+      },
+      "selection": {
+        "brush": {
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "neighbourhood_cleansed",
+          "type": "nominal",
+          "title": "Neighbourhood",
+          "sort": {
+            "encoding": "x"
+          }
+        },
+        "y": {
+          "field": "review_scores_checkin",
+          "type": "quantitative",
+          "aggregate": "average",
+          "title": "review_scores_checkin"
+        },
+        "color": {
+          "condition": {
+            "field": "room_type",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "neighbourhood_cleansed",
+            "type": "nominal"
+          },
+          {
+            "field": "room_type",
+            "type": "nominal",
+            "title": "room type"
+          },
+          {
+            "field": "review_scores_checkin",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "review_scores_checkin"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Communication Score with Neighbourhood (Ghent)"
+      },
+      "selection": {
+        "brush": {
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "neighbourhood_cleansed",
+          "type": "nominal",
+          "title": "neighbourhood",
+          "sort": {
+            "encoding": "x"
+          }
+        },
+        "y": {
+          "field": "review_scores_communication",
+          "type": "quantitative",
+          "aggregate": "average",
+          "title": "review_scores_communication"
+        },
+        "color": {
+          "condition": {
+            "field": "room_type",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "neighbourhood_cleansed",
+            "type": "nominal"
+          },
+          {
+            "field": "room_type",
+            "type": "nominal",
+            "title": "room type"
+          },
+          {
+            "field": "review_scores_communication",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "review_scores_communication"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Location Score with Neighbourhood (Ghent)"
+      },
+      "selection": {
+        "brush": {
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "neighbourhood_cleansed",
+          "type": "nominal",
+          "title": "neighbourhood",
+          "sort": {
+            "encoding": "x"
+          }
+        },
+        "y": {
+          "field": "review_scores_location",
+          "type": "quantitative",
+          "aggregate": "average",
+          "title": "review_scores_location"
+        },
+        "color": {
+          "condition": {
+            "field": "room_type",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "neighbourhood_cleansed",
+            "type": "nominal"
+          },
+          {
+            "field": "room_type",
+            "type": "nominal",
+            "title": "room type"
+          },
+          {
+            "field": "review_scores_location",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "review_scores_location"
+          }
+        ]
+      }
+    }
+  ]
+}
