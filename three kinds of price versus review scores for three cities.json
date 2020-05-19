@@ -1,0 +1,221 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/changsheng006/data/master/belgium_airbnb_revised20200511.csv"
+  },
+  "vconcat": [
+    {
+      "title": {
+        "text": "Price versus Review Scores"
+      },
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "selection": {
+        "brush": {
+          "encodings": [
+            "x"
+          ],
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "review_scores_rating",
+          "type": "quantitative"
+        },
+        "y": {
+          "aggregate": "mean",
+          "field": "price",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {
+            "field": "place",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "price",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "mean of price"
+          },
+          {
+            "field": "review_scores_rating",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "reviews_scores_rating"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Weekly Price versus Review Scores"
+      },
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "selection": {
+        "brush": {
+          "encodings": [
+            "x"
+          ],
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "review_scores_rating",
+          "type": "quantitative"
+        },
+        "y": {
+          "aggregate": "mean",
+          "field": "weekly_price",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {
+            "field": "place",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "weekly_price",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "mean of weekly price"
+          },
+          {
+            "field": "review_scores_rating",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "reviews_scores_rating"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Monthly Price versus Review Scores"
+      },
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "selection": {
+        "brush": {
+          "encodings": [
+            "x"
+          ],
+          "type": "interval"
+        },
+        "click": {
+          "encodings": [
+            "color"
+          ],
+          "type": "multi"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "click"
+          }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "review_scores_rating",
+          "type": "quantitative"
+        },
+        "y": {
+          "aggregate": "mean",
+          "field": "monthly_price",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {
+            "field": "place",
+            "selection": {
+              "or": [
+                "brush",
+                "click",
+                "click"
+              ]
+            },
+            "type": "nominal"
+          },
+          "value": "lightgray"
+        },
+        "tooltip": [
+          {
+            "field": "monthly_price",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "mean of monthly price"
+          },
+          {
+            "field": "review_scores_rating",
+            "aggregate": "average",
+            "type": "quantitative",
+            "title": "reviews_scores_rating"
+          }
+        ]
+      }
+    }
+  ]
+}
