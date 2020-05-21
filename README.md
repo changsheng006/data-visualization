@@ -12,7 +12,8 @@ For the coding (plot) part, I finished 6 interactive plots individually, includi
 
     The code file can be find on this page: 
 
-    The map codes: Please check the link: https://colab.research.google.com/drive/19CrYc4a1z4HXP85eodPg-xMZUKBKSRCd#scrollTo=8wmv32Xmcj5S (some codes can be found in "Exam project_data visualization20200430.ipynb" and shapefiles are also provided on this page)
+    The map codes: Please check the link: https://colab.research.google.com/drive/19CrYc4a1z4HXP85eodPg-xMZUKBKSRCd#scrollTo=8wmv32Xmcj5S 
+    (some codes can be found in "Exam project_data visualization20200430.ipynb" and shapefiles are also provided on this page)
 
     The vega-lite codes: see files with .json
 
