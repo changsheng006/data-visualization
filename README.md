@@ -8,7 +8,7 @@ The blog website: https://aditivrao94.wixsite.com/szechuandosa
 
 For the coding (plot) part, I finished 6 interactive plots individually, including 4 interactive plots by vega-lite in the blog “How to choose neighbourhood in Brussels, Antwerp or Ghent?” and “Which city is the best choice to stay?”, and 2 interactive map plots by python (Package: folium) in the blog “Plotting maps using vega”. Besides, I also work on two plots with team mates in the blog “Making it interactive - Comparing Cities” by R (Package: Altair).
 
-The data file can be found on: https://github.com/changsheng006/data
+The data file can be found on: https://github.com/changsheng006/data  
 
 The code file can be find on this page: 
 
