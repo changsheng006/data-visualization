@@ -19,4 +19,6 @@ For the coding (plot) part, I finished 6 interactive plots individually, includi
 
     The plots by R (Package Altair): see "exam project_airbnb20200418.R"
 
-For the video part, I finished the video of the interpretation for plots programmed by myself and collect all videos of other team mates to make the final video. The final video: check the link
+For the video part, I finished the video of the interpretation for plots programmed by myself and collect all videos of other team mates to make the final video. 
+    
+    The final video: check the link: https://www.youtube.com/watch?v=UQbrm8ceoCg&t=1s
