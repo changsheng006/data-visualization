@@ -22,3 +22,9 @@ For the coding (plot) part, I finished 6 interactive plots individually, includi
 For the video part, I finished the video of the interpretation for plots programmed by myself and collect all videos of other team mates to make the final video. 
     
     The final video: check the link: https://www.youtube.com/watch?v=UQbrm8ceoCg&t=1s
+    
+For research questions formation, I structured ideas and post it as a blog
+
+For presentation, I gave one presentation about map plots during the course
+
+For report writing, some parts of the final report are based on my blogs.
